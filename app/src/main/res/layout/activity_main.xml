@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dong.mymirror.activity.MainActivity">
+
+    <!--最底层布局-->
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!---->
+    <com.example.dong.mymirror.view.PictureView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+    <com.example.dong.mymirror.view.FunctionView
+        android:id="@+id/function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/bottom_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10">
+
+        <!--缩小焦距按钮-->
+        <ImageView
+            android:id="@+id/minus"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:src="@mipmap/downsmall"
+            android:scaleType="centerInside"/>
+        <!--焦距拖动条-->
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:progress="0"
+            android:thumbOffset="@dimen/dp_0"/>
+        <!--放大焦距按钮-->
+        <ImageView
+            android:id="@+id/add"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:src="@mipmap/uplarge"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+    <com.example.dong.mymirror.view.DrawView
+        android:id="@+id/draw_glasses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>
