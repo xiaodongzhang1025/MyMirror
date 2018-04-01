@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <RelativeLayout
+        android:layout_marginTop="@dimen/dp_5"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_30">
 
@@ -31,7 +32,7 @@
             android:layout_width="@dimen/dp_45"
             android:layout_height="@dimen/dp_45"
             android:scaleType="centerInside"
-            android:src="@mipmap/choose"
+            android:src="@mipmap/light"
             android:layout_centerInParent="true"/>
 
         <!--减少亮度按钮-->
